@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using lesohem.Models;
+@model User;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/auth/auth.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <div class="auth">
+        <div class="block">
+            <form class="auth-form" asp-action="Login" asp-controller="Account">
+                <input type="text" class="login" placeholder="Введите логин" asp-for="Name">
+                <input type="password" class="password" placeholder="Введите пароль" asp-for="Password">
+                @if (!string.IsNullOrEmpty(Model?.NotFound))
+                {
+                    <div class="user-notfound">
+                        <p>@Model.NotFound</p>
+                    </div>
+                }
+                <button class="send">Авторизация</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
