@@ -7,16 +7,16 @@ namespace lesohem.Models;
 public partial class User
 {
     public int Id { get; set; }
-    [Required(ErrorMessage = "Вы не ввели логин")]
+    [Required(ErrorMessage = "Не введен логин")]
     public string? Name { get; set; }
 
     public string? SurName { get; set; }
-    [Required(ErrorMessage = "Вы не ввели пароль")]
+    [Required(ErrorMessage = "Не введен пароль")]
     public string? Password { get; set; }
 
-    public string? NotFound { get; set; } = "";
-
     public string? Image { get; set; }
+
+    public string? ErrorMessage { get; set; }
 
     public int? RoleId { get; set; }
 

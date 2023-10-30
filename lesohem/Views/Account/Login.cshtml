@@ -15,12 +15,14 @@
     <div class="auth">
         <div class="block">
             <form class="auth-form" asp-action="Login" asp-controller="Account">
+                <span asp-validation-for="Name"></span>
                 <input type="text" class="login" placeholder="Введите логин" asp-for="Name">
+                <span asp-validation-for="Password"></span>
                 <input type="password" class="password" placeholder="Введите пароль" asp-for="Password">
-                @if (!string.IsNullOrEmpty(Model?.NotFound))
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
                 {
                     <div class="user-notfound">
-                        <p>@Model.NotFound</p>
+                        <p>Пользователь не найден</p>
                     </div>
                 }
                 <button class="send">Авторизация</button>

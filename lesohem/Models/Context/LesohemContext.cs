@@ -102,6 +102,7 @@ public partial class LesohemContext : DbContext
 
             entity.ToTable("User");
 
+            entity.Property(e => e.ErrorMessage).HasMaxLength(50);
             entity.Property(e => e.Image).HasMaxLength(200);
             entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.Password).HasMaxLength(100);

@@ -55,3 +55,17 @@ body {
     font-weight: 600;
     color: rgb(212, 1, 1);
 }
+
+/*----- Стилизация ошибки значений -----*/
+
+.field-validation-error{
+    color:red;
+    display:block;
+    font-size:14px;
+    text-align:center;
+    padding-bottom:5px;
+}
+
+.input-validation-error{
+    border:1px solid red;
+}

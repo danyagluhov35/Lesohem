@@ -1,4 +1,5 @@
 ﻿using lesohem.Models;
+using lesohem.Models.Context;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -11,32 +12,34 @@ namespace lesohem.Controllers
     {
         private readonly LesohemContext _db;
         public AccountController(LesohemContext db) => _db = db;
-        public IActionResult Index() => View();
+        public IActionResult Login() => View(new User());
 
-        public async Task<IActionResult> Login(User user)
+        [HttpPost]
+        public async Task<IActionResult> Login(User modelUser)
         {
-            try
+            var res = HttpContext.Request.Headers["Accept-Encoding"];
+            
+            if(ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                try
                 {
-                    User? data = await _db.Users.FirstOrDefaultAsync(u => u.Name == user.Name && u.Password == user.Password);
-                    if(data != null)
+                    User? data = await _db.Users.FirstOrDefaultAsync(u => u.Name == modelUser.Name && u.Password == modelUser.Password);
+                    if (data != null)
                     {
-                        var claims = new List<Claim>() { new Claim(ClaimTypes.Name, data?.Name!) };
-                        HttpContext?.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(new ClaimsIdentity(claims, "UserCookies")));
+                        var claims = new List<Claim>() { new Claim(ClaimTypes.Name, data.Name!) };
+                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(new ClaimsIdentity(claims, "CookieUserIdentity")));
+
                         return RedirectToAction("Index", "Home");
                     }
+                    else
+                        modelUser.ErrorMessage = "Пользователь не найден";
                 }
-                else
-                    user.NotFound = "Пользователь не найден";
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error - {ex.Message}");
+                }
             }
-            catch (Exception ex)
-            {
-                // Выполнить логгирование
-                Console.WriteLine(ex.Message);
-            }
-
-            return View(user);
+            return View(modelUser);
         }
     }
 }

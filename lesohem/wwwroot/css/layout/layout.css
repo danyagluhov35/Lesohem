@@ -1,0 +1,181 @@
+﻿ul, li, a {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-color: black;
+}
+
+/*----- Header -----*/
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+}
+
+.logo {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+    .menu li {
+        margin-right: 60px;
+        font-size: 18px;
+        position: relative;
+    }
+
+.profile {
+    display: flex;
+    margin-left: 160px;
+}
+
+    .profile a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+.profile-color {
+    fill: #fff;
+}
+
+.profile-name {
+    margin-top: 5px;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background-color: rgb(88, 88, 88);
+    display: none;
+}
+
+.sub-link {
+    padding: 5px 20px 5px 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+    .sub-link:hover a {
+        font-weight: 600;
+        color: #EC9727;
+    }
+
+.menu li:hover .sub-menu {
+    display: block;
+}
+
+.menu li .arrow-menu {
+    position: absolute;
+    right: -15px;
+    top: 6px;
+}
+
+.menu li:hover .arrow-menu {
+    transform: rotate(-90deg);
+}
+
+
+
+
+/*----- Footer -----*/
+
+footer {
+    background-color: #EC9727;
+    padding: 50px 0;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.item {
+    margin: 5px 10px;
+    color: #BBBBBB;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lesohem-footer-name {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-name p {
+    color: #28DEEC;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.main-item-info {
+    display: flex;
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+    .main-item-info img {
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+
+
+.comission-name {
+    color: #28DEEC;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.comission-item-info {
+    display: flex;
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+    .comission-item-info img {
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+.socialNet-name {
+    color: #28DEEC;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.socialNet-items {
+    display: flex;
+    justify-content: space-between;
+}
