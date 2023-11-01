@@ -1,75 +1,183 @@
 ﻿@{
     Layout = "/Views/Shared/_Layout.cshtml";
 }
-<link rel="stylesheet" href="css/index/Index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="/images/main/slider-swapper/image-3.jpeg" alt="">
+        </div>
+    </div>
+    <div class="js-swiper-navigation-button-next"></div>
+    <div class="js-swiper-navigation-button-prev"></div>
+</div>
+<div class="main">
+    <div class="container">
+        <div class="big-nav">
+            <div class="big-nav__resources-items">
+                <div class="resources-item__table">
+                    <div class="resources-item__name table-item__name">
+                        Расписание
+                    </div>
+                    <div class="table-item__image">
+                        <img src="/images/main/bigNav/Расписание.png" alt="">
+                    </div>
+                </div>
 
-<div class="container">
-    <div class="big-navigation">
-        <div class="big-navigation__first-block">
-            <a href="#" class="first-block__time-table">
-                <p class="time-table__name">Расписание</p>
-                <div class="time-table__image">
-                    <img src="/images/main/bigNav/Расписание.png" alt="">
+                <div class="resources-item">
+                    <div class="resources-item__name">
+                        Здоровье
+                    </div>
+                    <div class="resources-item__image">
+                        <img src="/images/main/bigNav/Здоровье.png" alt="">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="first-block__news">
-                <h2 class="news-name">Новости</h2>
-                <div class="news-image">
-                    <img src="/images/main/bigNav/Новости.jpg" alt="">
+
+                <div class="resources-item">
+                    <div class="resources-item__name">
+                        Онлайн курсы
+                    </div>
+                    <div class="resources-item__image">
+                        <img src="/images/main/bigNav/Курсы.png" alt="">
+                    </div>
                 </div>
-            </a>
+            </div>
+
+            <div class="big-nav__college-items">
+                <div class="college-items__news">
+                    <div class="news-name">Новости</div>
+                    <div class="news-image">
+                        <img src="/images/main/bigNav/Новости.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="college-items__information">
+                    <div class="information-items">
+                        <div class="item">
+                            <div class="item-name">Будущее ЧЛМТ</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/Будущее.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-name">Предложения</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/Предложения.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-name">Профессии</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/Профессии.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-name">Группа ВК</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/Группа вк.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-name">Корпуса</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/Корпуса.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-name">О нас</div>
+                            <div class="item-image">
+                                <img src="/images/main/bigNav/О нас.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="big-navigation__second-block">
-            <a href="#" class="second-block__health item-main">
-                <p class="health-name item-main__name">Здоровье</p>
-                <div class="health-image item-main__image">
-                    <img src="/images/main/bigNav/Здоровье.png" alt="">
+        <div class="lastnews">
+            <div class="lastnews-name">
+                <p>Последние новости</p>
+            </div>
+            <div class="lastnews-items">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__future">
-                <p class="future-name">Будущее члмт</p>
-                <div class="future-image">
-                    <img src="/images/main/bigNav/Будущее.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__discuss">
-                <p class="discuss-name">Предложения</p>
-                <div class="discuss-image">
-                    <img src="/images/main/bigNav/Предложения.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__profession">
-                <p class="profession-name">Профессии</p>
-                <div class="profession-image">
-                    <img src="/images/main/bigNav/Профессии.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__courses">
-                <p class="courses-name">Онлайн курсы</p>
-                <div class="courses-image item-main__image">
-                    <img src="/images/main/bigNav/Курсы.png" alt="">
+
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__vk">
-                <p class="vk-name">Группа ВК</p>
-                <div class="vk-image">
-                    <img src="/images/main/bigNav/Группа вк.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a href="#" class="second-block__building">
-                <p class="building-name">Корпуса</p>
-                <div class="building-image">
-                    <img src="/images/main/bigNav/Корпуса.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
-            <a class="second-block__aboutus">
-                <p class="aboutus-name">О нас</p>
-                <div class="aboutus-image">
-                    <img src="/images/main/bigNav/О нас.png" alt="">
+                <div class="lastnews-item">
+                    <div class="lastnews-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="lastnews-text">
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+        }
+    });
+</script>
+
