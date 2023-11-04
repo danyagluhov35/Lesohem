@@ -1,0 +1,101 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/css/admin/admin.css">
+
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="sidebar-main">
+            <div class="user-role">
+                <p>Администратор</p>
+            </div>
+            <div class="manage">
+                <!-- <div class="manage-news manage-item">
+                    <img src="/images/admin/news.png" alt="">
+                    <a href="#">Новости</a>
+                </div> -->
+                <div class="manage-news manage-item">
+                    <img src="/images/admin/people.png" alt="">
+                    <a href="#">Управление пользователями</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="profile-info">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="/images/admin/person.jpg">
+                    <p class="active">Active</p>
+                    <div class="custom-select">
+                        <img src="/images/admin/manage.png" alt="">
+                        <ul class="select">
+                            <li><a class="delete" href="#">Удалить</a></li>
+                            <li><a class="edit" href="#">Редактировать</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile-all-info">
+                    <div class="profile-fullname profile-item">
+                        <p class="text">ФИО</p>
+                        <p class="input">Глухов Даниил Дмитриевич</p>
+                    </div>
+
+                    <div class="profile-group profile-item">
+                        <p class="text">Группа</p>
+                        <p class="input">ИС-42</p>
+                    </div>
+
+                    <div class="profile-role profile-item">
+                        <p class="text">Роль</p>
+                        <p class="input">Администратор</p>
+                    </div>
+
+                    <div class="profile-mail profile-item">
+                        <p class="text">Почта</p>
+                        <p class="input">deni352002@gmail.com</p>
+                    </div>
+
+                    <div class="profile-date-create profile-item">
+                        <p class="text">Дата поступления</p>
+                        <p class="input">17.12.2002</p>
+                    </div>
+
+                    <div class="profile-date-end profile-item">
+                        <p class="text">Дата окончания</p>
+                        <p class="input">18.11.2023</p>
+                    </div>
+
+                    <div class="profile-country profile-item">
+                        <p class="text">Страна</p>
+                        <p class="input">Россия</p>
+                    </div>
+
+                    <div class="profile-city profile-item">
+                        <p class="text">Город</p>
+                        <p class="input">Череповец</p>
+                    </div>
+                </div>
+                <div class="activity-diagramm">
+                    <p style="text-align: center;">Данный блок находится в разработке, поскольку сам разработчик изучает подходящую для этого библотеку :D</p>
+                    <div class="diagramm">
+                        <canvas></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal-overlay">
+    <div class="modal-window">
+        <h2>Message</h2>
+        <p>Сообщение</p>
+        <div class="choose">
+            <button class="confirm">Подтвердить</button>
+            <button class="cancel">Отмена</button>
+        </div>
+    </div>
+</div>
